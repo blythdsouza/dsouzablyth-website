@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Blyth Dsouza — Portfolio website: First-Year Computer Engineering Student" />
+    <title>Blyth Dsouza — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- PRELOADER -->
+    <div id="preloader" class="preloader">
+      <div class="preloader-inner">
+        <div class="spinner"></div>
+        <p class="muted">Loading portfolio…</p>
+      </div>
+    </div>
+
+    <!-- CURSOR FOLLOWER -->
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- CANVAS PARTICLES BACKGROUND -->
+    <canvas id="particlesCanvas" class="particles"></canvas>
+
+    <!-- NAVBAR / HEADER -->
+    <header class="site-header" id="home">
+      <nav class="nav container">
+        <div class="logo" aria-hidden>
+          <div class="badge">BD</div>
+          <div class="brand">Blyth</div>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#certs" class="nav-link">Certifications</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-cta">
+          <button id="themeToggle" class="btn btn-ghost" aria-pressed="false">🌙</button>
+          <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main">
+      <!-- HERO / HOME -->
+      <section class="hero container" id="intro">
+        <div class="hero-left">
+          <h1 class="hero-title">Blyth Dsouza.<span class="accent"> </span></h1>
+          <p class="tagline">First-Year Computer Engineering student — builder, designer, and explorer of technology.</p>
+
+          <div class="typewriter" aria-hidden>
+            <span id="typewriterText"></span>
+            <span class="cursor-blink">|</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">See Projects</a>
+            <a class="btn btn-outline" href="#gallery">Gallery</a>
+          </div>
+
+          <div class="intro-meta">
+            <div class="meta-card floating">Intro</div>
+            <div class="meta-card floating delay">Btech in computer Engineering</div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-image">
+            <img src="blyth/intro.jpeg" alt="Blyth intro image" loading="lazy">
+            <div class="glow"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section container reveal" id="about">
+        <div class="section-grid">
+          <div class="about-card">
+            <h2>About Me <span class="muted">— First-Year Student</span></h2>
+            <p class="lead">I’m Blyth Dsouza, a first-year Computer Engineering student passionate about coding, digital systems, and tech innovation. I enjoy drawing, watching web series, reading books, and gardening alongside hands-on projects and collaborative learning.</p>
+            <p>I’m a big foodie and love trying new dishes. I love to travel and explore new places, especially beaches. Discovering new destinations, experiencing different cultures, and enjoying the beauty of the seaside brings me a lot of joy and excitement.</p>
+
+            <div class="about-stats">
+              <div><strong>College</strong><span>Fr. Conceicao Rodrigues College of Engineering, Bandra</span></div>
+              <div><strong>Year</strong><span>First Year — Computer Engineering</span></div>
+              <div><strong>Interests</strong><span>AI, design, art, photography</span></div>
+            </div>
+
+            <div class="actions">
+              <a href="#projects" class="btn btn-primary">View Projects</a>
+              <a href="#contact" class="btn btn-ghost">Contact</a>
+            </div>
+          </div>
+
+          <div class="about-image">
+            <img src="blyth/about%20me.jpg" alt="Blyth Dsouza — portrait" loading="lazy">
+            <div class="label">About Me</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION + ACHIEVEMENTS -->
+      <section class="section container reveal" id="education">
+        <div class="two-col">
+          <div class="card">
+            <h3>Education</h3>
+            <p>I am a Computer Engineering student at Fr. Conceicao Rodrigues College of Engineering, Bandra. I’m passionate about blending creativity with technology to design meaningful, innovative solutions. My interests span AI, design, and data, along with a deep love for art, drawing, and photography. I value discipline, detail, and growth, finding balance through travel, music, and time with loved ones.</p>
+          </div>
+
+          <div class="card">
+            <h3>Achievements</h3>
+            <ul class="achievements">
+              <li>Attended Bit N Build workshops — practical, hands-on hack days</li>
+              <li>Certificates, competitions and awards (see Certifications)</li>
+              <li>Active in creative projects and collaborative builds</li>
+            </ul>
+            <p class="muted">Tip: You can add certificates to the Projects area or upload images using the small uploader on the Projects page.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="section container reveal" id="projects">
+        <header class="section-header">
+          <h2>Projects</h2>
+          <p class="muted">A selection of small projects, hands-on exercises and certificate uploads</p>
+        </header>
+
+        <div class="projects-grid">
+          <!-- Certificate-focused project: Bit N Build -->
+          <article class="project-card tilt cert-card">
+            <div class="project-media"><img src="blyth/idea.jpg" alt="Bit N Build certificate / Idea image"></div>
+            <div class="project-body">
+              <h3>Bit N Build — Certificate</h3>
+              <p class="muted">Bit N Build is a hands-on workshop/hackathon focused on rapid prototyping, practical problem solving and collaborative engineering. Below is a sample certificate — you can upload your own certificate image to preview it locally using the uploader.</p>
+
+              <div class="project-actions">
+                <button class="btn btn-outline" onclick="openProjectModal(this)">View Larger</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div id="projectModal" class="modal" aria-hidden="true">
+          <div class="modal-inner">
+            <button class="modal-close" onclick="closeProjectModal()">✕</button>
+            <div class="modal-content" id="modalContent">Project preview</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY (multi-section inside) -->
+      <section class="section container reveal" id="gallery">
+        <header class="section-header">
+          <h2>Gallery / Portfolio</h2>
+          <p class="muted">A collection of images and videos — drawing, food, sky photos and short clips.</p>
+        </header>
+
+        <div class="gallery-tabs">
+          <button class="tab active" data-tab="sky">Sky</button>
+          <button class="tab" data-tab="food">Food </button>
+          <button class="tab" data-tab="drawing">Hobby</button>
+          <button class="tab" data-tab="videos">Videos</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Sky collection -->
+          <div data-collection="sky" class="collection active">
+            <div class="grid">
+              <img src="blyth/sky/s1.jpeg" alt="s1">
+              <img src="blyth/sky/s2.jpg" alt="s2">
+              <img src="blyth/sky/s3.jpeg" alt="s3">
+              <img src="blyth/sky/s4.jpeg" alt="s4">
+              <img src="blyth/sky/s5.jpeg" alt="s5">
+              <img src="blyth/sky/s6.jpg" alt="s6">
+            </div>
+          </div>
+
+          <!-- Food collection -->
+          <div data-collection="food" class="collection">
+            <div class="grid">
+              <img src="blyth/food/f1.jpeg" alt="f1">
+              <img src="blyth/food/f2.jpg" alt="f2">
+              <img src="blyth/food/f3.jpg" alt="f3">
+              <img src="blyth/food/f4.jpeg" alt="f4">
+              <img src="blyth/food/f5.jpeg" alt="f5">
+            </div>
+          </div>
+
+          <!-- Drawing collection -->
+          <div data-collection="drawing" class="collection">
+            <div class="grid">
+              <img src="blyth/drawing/d1.jpg" alt="d1">
+              <img src="blyth/drawing/d2.jpg" alt="d2">
+              <img src="blyth/drawing/d3.jpg" alt="d3">
+              <img src="blyth/drawing/d4.jpg" alt="d4">
+              <img src="blyth/drawing/d5.jpg" alt="d5">
+            </div>
+          </div>
+
+          <!-- Videos -->
+          <div data-collection="videos" class="collection">
+            <div class="grid videos">
+              <!-- Browser may not play MOV natively on all platforms. These will be available when published to GitHub and supported browsers. -->
+              <video controls src="blyth/vid/v1.MOV"></video>
+              <video controls src="blyth/vid/v2.mov"></video>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS (matlab images) -->
+      <section class="section container reveal" id="certs">
+        <header class="section-header">
+          <h2>Certifications & Achievements</h2>
+          <p class="muted">A few certificates and sample outputs from class and workshops</p>
+        </header>
+
+        <div class="certs-grid">
+          <img src="matlab/1.png" alt="certificate 1">
+          <img src="matlab/2.png" alt="certificate 2">
+          <img src="matlab/3.png" alt="certificate 3">
+          <img src="matlab/4.png" alt="certificate 4">
+          <img src="matlab/5.png" alt="certificate 5">
+        </div>
+
+        <p class="muted">Tip — click the Upload Certificate button in Projects to preview or add new certificates locally.</p>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section container reveal" id="contact">
+        <header class="section-header">
+          <h2>Contact Me</h2>
+          <p class="muted">Drop a message — I check messages regularly!</p>
+        </header>
+
+        <div class="two-col">
+          <div class="card contact-card">
+            <form id="contactForm" novalidate>
+              <label>Name <input type="text" name="name" id="name" placeholder="Your name" required></label>
+              <label>Contact (email/phone) <input type="text" name="contact" id="contact" placeholder="Email or phone" required></label>
+              <label>Message <textarea name="message" id="message" placeholder="Write a short message" rows="5" required></textarea></label>
+
+              <div class="muted small">When you submit the form your email client will open so you can send the message to <strong>blythdsouza@gmail.com</strong>.</div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Send message</button>
+                <button type="reset" class="btn btn-ghost">Reset</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="card map-card">
+            <h3>Follow or reach out</h3>
+            <p>Fr. Conceicao Rodrigues College of Engineering, Bandra — I’m open to collaborations, projects and friendly conversations about technology and design.</p>
+            <ul class="contact-list">
+              <li>Email: <a href="mailto:blyth@example.com">blythdsouza@.com</a></li>
+              <li>Phone: +91 9112118166</li>
+                <li>
+                  Social:
+                  <span class="social-boxes">
+                    <a class="social-box" href="https://www.instagram.com/blyth_dsouza?igsh=MXIwazhmd3ptaWVlNg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a class="social-box" href="https://pin.it/2mISSu7NT" target="_blank" rel="noopener noreferrer">Pinterest</a>
+                    <a class="social-box" href="https://www.linkedin.com/in/blyth-dsouza-a826a9385" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  </span>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="site-footer container">
+        <div class="footer-grid">
+          <div class="brand">BD — Blyth Dsouza</div>
+          <div class="small">@Made with ❤️ Blyth Dsouza</div>
+          <div class="attribution">Site includes HTML,CSS AND JAVASCRIPT</div>
+        </div>
+      </footer>
+
+    </main>
+
+    <!-- JS -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
